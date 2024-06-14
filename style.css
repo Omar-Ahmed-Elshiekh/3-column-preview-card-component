@@ -65,6 +65,7 @@ p {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      height: 200px;
     }
   }
 }
