@@ -1,0 +1,111 @@
+:root {
+  --bright-orange-hsl: 31, 77%, 52%;
+  --dark-cyan-hsl: 184, 100%, 22%;
+  --very-dark-cyan-hsl: 179, 100%, 13%;
+
+  --bright-orange-p: hsl(var(--bright-orange-hsl));
+  --dark-cyan-p: hsl(var(--dark-cyan-hsl));
+  --very-dark-cyan-p: hsl(var(--very-dark-cyan-hsl));
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+
+  --fs-p: 15px;
+  --fs-h: 37.32px;
+}
+.b-o {
+  color: var(--bright-orange-p);
+}
+.d-c {
+  color: var(--dark-cyan-p);
+}
+
+.v-d-c {
+  color: var(--very-dark-cyan-p);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Very-light-gray);
+  font-family: "Lexend Deca";
+  font-weight: 400;
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  font-size: var(--fs-h);
+  color: var(--Very-light-gray);
+  text-transform: uppercase;
+}
+
+p {
+  font-size: var(--fs-p);
+  color: var(--Transparent-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 60%;
+  border-radius: 1rem;
+  article {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+
+main .part1 {
+  background-color: var(--bright-orange-p);
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+main .part2 {
+  background-color: var(--dark-cyan-p);
+}
+main .part3 {
+  background-color: var(--very-dark-cyan-p);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+button {
+  margin-top: 3rem;
+  width: 160px;
+  padding: 0.655rem 1rem;
+  border-radius: 100rem;
+  border: 1px solid var(--Very-light-gray);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--Transparent-white);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 1rem;
+  }
+  main .part1 {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  main .part3 {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
